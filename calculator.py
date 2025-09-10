@@ -46,13 +46,8 @@ def factorial(n: int) -> int:
     """Calculate factorial of a non-negative integer."""
     if n < 0:
         raise ValueError("Cannot compute factorial of negative number")
-    if n == 0:
-        return 1
-    result = 1
-    for i in range(1, n + 1):
-        result *= i
-    return result
+    return math.factorial(n)
 
 def max_of_two(a: Number, b: Number) -> Number:
     """Return the larger of two numbers."""
-    return max(a, b)
+    return a if a >= b else b
